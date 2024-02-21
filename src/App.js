@@ -5,8 +5,7 @@ import Bolinho from './Bolinho';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
+      <header>
       </header>
       <Bolinho></Bolinho>
     </div>
