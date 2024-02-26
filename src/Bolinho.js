@@ -3,7 +3,7 @@ import React from 'react'
 const Bolinho = () => {
   return (
     <div>
-      <h1>Bolo de Iogurte</h1>
+      <h1>Bolo de Iogurte light</h1>
       <ul>
         <li>4 ovos</li>
         <li>1/2 copo de Óleo</li>
