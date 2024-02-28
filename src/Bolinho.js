@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Bolinho = () => {
   return (
@@ -14,7 +14,7 @@ const Bolinho = () => {
         <li>2 copos de açúcar</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Bolinho
+export default Bolinho;

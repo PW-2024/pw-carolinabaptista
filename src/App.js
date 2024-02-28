@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Bolinho from './Bolinho';
+import logo from "./logo.svg";
+import "./App.css";
+import Bolinho from "./Bolinho";
 
 function App() {
   return (
     <div className="App">
-      <header>
-      </header>
+      <header></header>
       <Bolinho></Bolinho>
     </div>
   );
