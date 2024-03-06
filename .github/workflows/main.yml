@@ -1,0 +1,35 @@
+name: pipeline CI
+
+on:
+  push:
+    branches: ['**']
+
+  # pull_request:
+  #   branches: ["master", "new-feature"]
+
+jobs:
+  setup-inicial:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Inicial
+        uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+      - run: npm install
+      - run: npx prettier . --write
+      - run: npx prettier . --check
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [setup-inicial]
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        uses: actions/setup-node@v3
+      - run: npm install #instala dependências
+      - run: npm run build #build
+
+      
