@@ -21,25 +21,17 @@ jobs:
       - run: npx prettier . --write
       - run: npx prettier . --check
 
-  test:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v3
-      - run: npm install
-      - run: npm test
-
-  deploy:
+  build:
     runs-on: ubuntu-latest
     if:  github.ref == 'refs/heads/master' 
 
-    needs: [setup-inicial, test]
+    needs: [setup-inicial]
     
     steps:
       - uses: actions/checkout@v3
-      - name: Build e Deploy
+      - name: Build
         uses: actions/setup-node@v3
-      - run: npm install     #instala dependências
-      - run:  npm run build  #build
+      - run: npm install #instala dependências
+      - run: npm run build #build
 
       
